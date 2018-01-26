@@ -1,0 +1,5 @@
+{
+	"items": [
+		{"name": "lora", "priority": 1, "action": "bin/lora.sh"}
+	]
+}
