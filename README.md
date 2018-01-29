@@ -70,6 +70,20 @@ fsp                       1.3G    623.5M    728.5M  46% /mnt/us
 
 ```
 
+create /lib/ld-linux-armhf.so.3 file for some file, renamed from /lib/ld-linux.so.3 
+
+```shell
+[root@kindle root]# ls /lib/ -al
+drwxrwxr-x    5 root     root          2048 Jan 17 10:30 .
+drwxr-xr-x   13 root     root          1024 Dec  4 16:08 ..
+lrwxrwxrwx    1 root     root             8 Apr 23  2014 cpp -> /bin/cpp
+-rwxr-xr-x    1 root     root          7656 Apr 23  2014 e2initrd_helper
+drwxrwxr-x    4 root     root          1024 Apr 23  2014 firmware
+-rwxr-xr-x    1 root     root         76308 Apr 23  2014 klibc-KukkXgqjfSmsQ1r5iaQqrMdfe3M.so
+-rwxr-xr-x    1 root     root        101792 Sep 11  2010 ld-2.12.1.so
+-rwxr-xr-x    1 root     root        101792 Jan 17 10:30 ld-linux-armhf.so.3
+lrwxrwxrwx    1 root     root            12 Apr 23  2014 ld-linux.so.3 -> ld-2.12.1.so
+``
 
 the kpw2/lora is a extension of KUAL
 
