@@ -30,6 +30,47 @@ switch back to a writable rootfs.
 **NOTE** <***mntroot rw***> will make rootfs writable
 
 
+### KPW2 Disk Partition
+
+```shell
+[root@kindle root]# fdisk -l
+
+Disk /dev/mmcblk0: 1958 MB, 1958739968 bytes
+4 heads, 16 sectors/track, 59776 cylinders
+Units = cylinders of 64 * 512 = 32768 bytes
+
+        Device Boot      Start         End      Blocks  Id System
+/dev/mmcblk0p1   *        1025       12224      358400  83 Linux
+/dev/mmcblk0p2           12225       14272       65536  83 Linux
+/dev/mmcblk0p3           14273       16320       65536  83 Linux
+/dev/mmcblk0p4           16321       59776     1390592   b Win95 FAT32
+
+Disk /dev/mmcblk0boot0: 1 MB, 1048576 bytes
+4 heads, 16 sectors/track, 32 cylinders
+Units = cylinders of 64 * 512 = 32768 bytes
+
+Disk /dev/mmcblk0boot0 doesn't contain a valid partition table
+[root@kindle root]# df -h
+Filesystem                Size      Used Available Use% Mounted on
+/dev/root               340.2M    292.8M     30.3M  91% /
+tmpfs                   124.8M    104.0K    124.7M   0% /dev
+tmpfs                   124.8M         0    124.8M   0% /dev/shm
+tmpfs                    32.0M    368.0K     31.6M   1% /var
+/dev/loop/2               2.5M      2.5M         0 100% /usr/share/X11/xkb
+/dev/loop/3             100.1M    100.1M         0 100% /usr/java/lib/fonts
+/dev/loop/4               1.3M      1.3M         0 100% /etc/kdb.src
+/dev/loop/5               8.0M      8.0M         0 100% /usr/lib/locale
+/dev/loop/6              16.0M     16.0M         0 100% /usr/share/keyboard
+/dev/mmcblk0p3           62.0M     21.1M     37.6M  36% /var/local
+/dev/loop/0               1.3G    623.5M    728.5M  46% /mnt/base-us
+fsp                       1.3G    623.5M    728.5M  46% /mnt/us
+/dev/loop/7              23.6M     23.6M         0 100% /var/local/font/mnt/ja_font
+/dev/loop/8              46.1M     46.1M         0 100% /var/local/font/mnt/zh-Hans_font
+[root@kindle root]# 
+
+```
+
+
 the kpw2/lora is a extension of KUAL
 
 
